@@ -1,0 +1,7 @@
+def findFrequency (arr, n, x):
+    # Your Code Here
+    c=0
+    for i in range(n):
+        if arr[i]==x:
+            c+=1
+    return c
