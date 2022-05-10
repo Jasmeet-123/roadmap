@@ -1,0 +1,5 @@
+def MissingNumber(self,array,n):
+        # code here
+        s=(n*(n+1))//2
+        t=sum(array)
+        return s-t
