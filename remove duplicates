@@ -1,0 +1,11 @@
+def duplicates(self, arr, n): 
+    	# code here
+    	arr.sort()
+    	r=[]
+    	for i in range(len(arr)-1):
+    	    if arr[i]==arr[i+1]:
+    	        r.append(arr[i])
+    	if len(r)==0:
+    	    r=[-1]
+    	
+    	return sorted(list(set(r)))
