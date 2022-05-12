@@ -1,0 +1,7 @@
+def commonElements (self,A, B, C, n1, n2, n3):
+        # your code here
+        d=set(A)
+        e=set(B)
+        f=set(C)
+        g=d.intersection(e,f)
+        return sorted(list(g))
