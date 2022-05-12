@@ -1,0 +1,10 @@
+   def firstRepeated(self,arr, n):
+        
+        #arr : given array
+        #n : size of the array
+        l=set(arr)
+        if len(l)==n:
+            return -1
+        for i in range(len(arr)):
+            if arr.count(arr[i]) > 1:
+                return i+1
