@@ -1,0 +1,45 @@
+#User function Template for python3
+
+class Solution:
+    def rearrange(self,arr, n):
+        # code here
+        p=[]
+        ne=[]
+        for i in range(n):
+            if arr[i]>=0:
+                p.append(arr[i])
+            elif arr[i]<0:
+                ne.append(arr[i])
+        arr.clear()
+        
+        s=0
+        for i in range(0,max(len(p),len(ne))):
+            if i>(len(p)-1):
+                s+=1
+            else:
+                arr.append(p[i])
+            if i>(len(ne)-1):
+                s+=1
+            else:
+                arr.append(ne[i])
+        return arr
+            
+                
+
+#{ 
+#  Driver Code Starts
+#Initial Template for Python 3
+
+if __name__ == '__main__':
+    tc = int(input())
+    while tc > 0:
+        n = int(input())
+        arr = list(map(int, input().strip().split()))
+        ob = Solution()
+        ob.rearrange(arr, n)
+        for x in arr:
+            print(x, end=" ")
+        print()
+        tc -= 1
+
+# } Driver Code Ends
